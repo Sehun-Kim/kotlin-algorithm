@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="programmers.level1.LottoMaxAndMinTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-04T11:07:21" hostname="sehun.local" time="0.032">
+  <properties/>
+  <testcase name="test1" classname="programmers.level1.LottoMaxAndMinTest" time="0.032"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
