@@ -24,7 +24,7 @@ abstract class TreeBaseTest {
         printTreeAndAddToList(root.right, false, list);
     }
 
-    TreeNode generateTree(int... nums) {
+    TreeNode generateBinarySearchTree(int... nums) {
         TreeNode root = null;
 
         for (int num : nums) {
@@ -34,6 +34,14 @@ abstract class TreeBaseTest {
                 set(root, num);
             }
         }
+        return root;
+    }
+
+    TreeNode generateBinaryTreeByList(List<Integer> nums) {
+        int idx = 0;
+        TreeNode root = new TreeNode(nums.get(idx));
+        set(root, nums, idx);
+
         return root;
     }
 
@@ -53,7 +61,23 @@ abstract class TreeBaseTest {
                 set(node.left, val);
             }
         }
+    }
 
+    private void set(TreeNode node, List<Integer> nums, int idx) {
+        if (node == null) return;
+
+        int leftIdx = idx + idx + 1;
+        int rightIdx = idx + idx + 2;
+
+        if (nums.size() > leftIdx && nums.get(leftIdx) != null) {
+            node.left = new TreeNode(nums.get(leftIdx));
+            set(node.left, nums, leftIdx);
+        }
+
+        if (nums.size() > rightIdx && nums.get(rightIdx) != null) {
+            node.right = new TreeNode(nums.get(rightIdx));
+            set(node.right, nums, rightIdx);
+        }
     }
 
 }

@@ -13,7 +13,7 @@ class InvertBinaryTreeTest extends TreeBaseTest {
     @Test
     void test1() {
         // given
-        TreeNode tree = generateTree(4, 2, 7, 1, 3, 6, 9);
+        TreeNode tree = generateBinarySearchTree(4, 2, 7, 1, 3, 6, 9);
 
         // when
         TreeNode result = new InvertBinaryTree().invertTree(tree);
@@ -28,7 +28,7 @@ class InvertBinaryTreeTest extends TreeBaseTest {
     @Test
     void test2() {
         // given
-        TreeNode tree = generateTree(2, 1, 3);
+        TreeNode tree = generateBinarySearchTree(2, 1, 3);
 
         // when
         TreeNode result = new InvertBinaryTree().invertTree(tree);
@@ -43,7 +43,7 @@ class InvertBinaryTreeTest extends TreeBaseTest {
     @Test
     void test3() {
         // given
-        TreeNode tree = generateTree();
+        TreeNode tree = generateBinarySearchTree();
 
         // when
         TreeNode result = new InvertBinaryTree().invertTree(tree);
